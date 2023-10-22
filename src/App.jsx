@@ -14,11 +14,11 @@ function App() {
         <Routes>
           {/* <Route index element={<AppLayout />} /> */}
           <Route path="" element={<AppLayout />}>
-            <Route index element={<Navigate replace to="cities" />} />
+            {/* <Route index element={<Navigate replace to="cities" />} /> */}
             {/* immediately redirect to "/cities" using Navigate */}
             <Route path="recipes" element={<Recipes />} />
             <Route path="tips" element={<Tips />} />
-            <Route path="cities" element={<Home />} />
+            <Route path="" element={<Home />} />
             <Route path="cities/:id" element={<Home />} />
             <Route path="countries" element={<Home />} />
           </Route>
