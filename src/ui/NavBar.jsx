@@ -1,8 +1,17 @@
 import { NavLink } from "react-router-dom";
 import SearchBar from "./SearchBar";
-import MenuIcon from "./MenuIcon";
+import MenuIcon from "./icons/MenuIcon";
+import SideMenu from "./SideMenu";
+import Logo from "./Logo";
+import { useState } from "react";
 
 function NavBar() {
+  const [showSideMenu, setShowSideMenu] = useState(false);
+
+  function handleMenuClick() {
+    setShowSideMenu((show) => !show);
+  }
+
   return (
     <nav className="bg-yellow-300 py-4 px-6 items-center shadow-sm">
       <ul className="flex justify-between">
@@ -12,28 +21,21 @@ function NavBar() {
           </NavLink>
           <SearchBar />
         </div>
-        <div className="sm:flex items-center gap-5 px-3 hidden">
+        <div className="sm:flex items-center gap-5 px-3 hidden all">
           <NavLink to="recipes">Recipes</NavLink>
           <NavLink to="tips">Tips & Tricks</NavLink>
         </div>
-        <div className="sm:hidden flex items-center ml-2">
-          <li>
+        <li className="flex items-center ml-2">
+          <span
+            onClick={handleMenuClick}
+            className="transition duration-2000 all"
+          >
             <MenuIcon />
-          </li>
-        </div>
+          </span>
+          {showSideMenu && <SideMenu onToggleMenu={handleMenuClick} />}
+        </li>
       </ul>
     </nav>
-  );
-}
-
-function Logo() {
-  return (
-    <li className="flex items-center text-2xl">
-      <span role="img" className="text-3xl">
-        👩🏻‍🍳&nbsp;
-      </span>
-      <h1 className="font-bold">Easy Recipes </h1>
-    </li>
   );
 }
 
