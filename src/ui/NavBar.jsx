@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import SearchBar from "./SearchBar";
+import MenuIcon from "./MenuIcon";
 
 function NavBar() {
   return (
@@ -11,9 +12,14 @@ function NavBar() {
           </NavLink>
           <SearchBar />
         </div>
-        <div className="flex items-center gap-5 px-3">
+        <div className="sm:flex items-center gap-5 px-3 hidden">
           <NavLink to="recipes">Recipes</NavLink>
           <NavLink to="tips">Tips & Tricks</NavLink>
+        </div>
+        <div className="sm:hidden flex items-center ml-2">
+          <li>
+            <MenuIcon />
+          </li>
         </div>
       </ul>
     </nav>
@@ -22,8 +28,10 @@ function NavBar() {
 
 function Logo() {
   return (
-    <li className="flex">
-      <span role="img">🍔&nbsp;&nbsp;</span>
+    <li className="flex items-center text-2xl">
+      <span role="img" className="text-3xl">
+        👩🏻‍🍳&nbsp;
+      </span>
       <h1 className="font-bold">Easy Recipes </h1>
     </li>
   );
