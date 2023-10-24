@@ -13,11 +13,15 @@ function SideMenu({ onToggleMenu }) {
       <div className="absolute top-0 right-0 bg-slate-100 w-[25vw] h-screen">
         <div className="flex justify-between px-5 py-5">
           <ul className="flex flex-col gap-3">
-            <NavLink to="">
+            <NavLink to="" onClick={onToggleMenu}>
               <Logo />
             </NavLink>
-            <NavLink to="recipes">Recipes</NavLink>
-            <NavLink to="tips">Tips & Tricks</NavLink>
+            <NavLink to="recipes" onClick={onToggleMenu}>
+              Recipes
+            </NavLink>
+            <NavLink to="tips" onClick={onToggleMenu}>
+              Tips & Tricks
+            </NavLink>
           </ul>
           <span className="cursor-pointer" onClick={onToggleMenu}>
             <CloseIcon />
