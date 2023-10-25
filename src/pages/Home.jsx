@@ -6,7 +6,7 @@ function Home() {
     <>
       <Hero />
       <div className="p-5 flex flex-col gap-5">
-        <h1 className="font-bold text-xl">Cooking made simple</h1>
+        <h1 className="font-bold text-xl">Recipes for you</h1>
         <MenuItem />
       </div>
     </>

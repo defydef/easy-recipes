@@ -25,7 +25,7 @@ function NavBar() {
           <NavLink to="recipes">Recipes</NavLink>
           <NavLink to="tips">Tips & Tricks</NavLink>
         </div>
-        <li className="flex items-center ml-2">
+        <li className="flex items-center ml-2 sm:hidden">
           <span
             onClick={handleMenuClick}
             className="transition duration-2000 all"
