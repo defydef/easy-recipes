@@ -13,7 +13,7 @@ function NavBar() {
   }
 
   return (
-    <nav className="bg-yellow-300 py-4 px-6 items-center shadow-sm">
+    <nav className="bg-amber-500 py-4 px-6 items-center shadow-sm text-slate-800">
       <ul className="flex justify-between">
         <div className="flex items-center gap-12">
           <NavLink to="/">

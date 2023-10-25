@@ -3,8 +3,9 @@ function HeroImage() {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       // width="713.52567"
-      width="428.115402"
-      height="614.00006/3"
+      // width="428.115402"
+      width="350"
+      // height="614.00006"
       viewBox="0 0 713.52567 614.00006"
       xmlnsXlink="http://www.w3.org/1999/xlink"
     >
