@@ -1,5 +1,5 @@
 import Hero from "../ui/Hero";
-import MenuItem from "../ui/MenuItem";
+import Recipe from "../ui/Recipe";
 
 function Home() {
   return (
@@ -7,7 +7,7 @@ function Home() {
       <Hero />
       <div className="p-5 flex flex-col gap-5">
         <h1 className="font-bold text-xl">Recipes for you</h1>
-        <MenuItem />
+        <Recipe />
       </div>
     </>
   );
