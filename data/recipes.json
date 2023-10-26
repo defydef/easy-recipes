@@ -1,18 +1,44 @@
 {
   "recipes": [
     {
-      "name": "Focaccia",
+      "id": 1,
+      "name": "Brownies",
       "ingredients": "Bread with italian olive oil and rosemary",
-      "price": 6,
-      "photoName": "pizzas/focaccia.jpg",
-      "soldOut": false
+      "cookingTime": 60,
+      "photoName": "recipes/brownies.jpeg",
+      "category": "dessert"
     },
     {
-      "name": "Pizza Margherita",
-      "ingredients": "Tomato and mozarella",
-      "price": 10,
-      "photoName": "pizzas/margherita.jpg",
-      "soldOut": false
+      "id": 2,
+      "name": "Cupcakes",
+      "ingredients": "Bread with italian olive oil and rosemary",
+      "cookingTime": 60,
+      "photoName": "recipes/cupcakes.jpeg",
+      "category": "dessert"
+    },
+    {
+      "id": 3,
+      "name": "Donuts",
+      "ingredients": "Bread with italian olive oil and rosemary",
+      "cookingTime": 60,
+      "photoName": "recipes/donuts.jpeg",
+      "category": "dessert"
+    },
+    {
+      "id": 4,
+      "name": "Macarons",
+      "ingredients": "Bread with italian olive oil and rosemary",
+      "cookingTime": 60,
+      "photoName": "recipes/macarons.jpeg",
+      "category": "dessert"
+    },
+    {
+      "id": 5,
+      "name": "Pancakes",
+      "ingredients": "Bread with italian olive oil and rosemary",
+      "cookingTime": 60,
+      "photoName": "recipes/pancake.jpeg",
+      "category": "dessert"
     }
   ]
 }

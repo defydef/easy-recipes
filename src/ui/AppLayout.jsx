@@ -1,3 +1,4 @@
+import { RecipeProvider } from "../features/recipes/RecipeContext";
 import NavBar from "./Navbar";
 import { Outlet } from "react-router-dom";
 
@@ -5,7 +6,9 @@ function AppLayout() {
   return (
     <div>
       <NavBar />
-      <Outlet />
+      <RecipeProvider>
+        <Outlet />
+      </RecipeProvider>
     </div>
   );
 }
