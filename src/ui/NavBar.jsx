@@ -5,6 +5,8 @@ import SideMenu from "./SideMenu";
 import Logo from "./Logo";
 import { useState } from "react";
 
+const underlineStyle = "hover:underline hover:underline-offset-2";
+
 function NavBar() {
   const [showSideMenu, setShowSideMenu] = useState(false);
 
@@ -22,8 +24,12 @@ function NavBar() {
           <SearchBar />
         </div>
         <div className="sm:flex items-center gap-5 px-3 hidden all">
-          <NavLink to="recipes">Recipes</NavLink>
-          <NavLink to="tips">Tips & Tricks</NavLink>
+          <NavLink to="recipes" className={underlineStyle}>
+            Recipes
+          </NavLink>
+          <NavLink to="tips" className={underlineStyle}>
+            Tips
+          </NavLink>
         </div>
         <li className="flex items-center ml-2 sm:hidden">
           <span
