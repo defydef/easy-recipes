@@ -4,7 +4,7 @@
       "id": 1,
       "name": "Brownies",
       "ingredients": "Bread with italian olive oil and rosemary",
-      "cookingTime": 60,
+      "cookingTime": 45,
       "photoName": "recipes/brownies.jpeg",
       "category": "dessert"
     },
@@ -20,7 +20,7 @@
       "id": 3,
       "name": "Donuts",
       "ingredients": "Bread with italian olive oil and rosemary",
-      "cookingTime": 60,
+      "cookingTime": 30,
       "photoName": "recipes/donuts.jpeg",
       "category": "dessert"
     },
@@ -28,7 +28,7 @@
       "id": 4,
       "name": "Macarons",
       "ingredients": "Bread with italian olive oil and rosemary",
-      "cookingTime": 60,
+      "cookingTime": 180,
       "photoName": "recipes/macarons.jpeg",
       "category": "dessert"
     },
@@ -36,7 +36,7 @@
       "id": 5,
       "name": "Pancakes",
       "ingredients": "Bread with italian olive oil and rosemary",
-      "cookingTime": 60,
+      "cookingTime": 15,
       "photoName": "recipes/pancake.jpeg",
       "category": "dessert"
     },
@@ -76,7 +76,7 @@
       "id": 10,
       "name": "Pancakes",
       "ingredients": "Bread with italian olive oil and rosemary",
-      "cookingTime": 60,
+      "cookingTime": 180,
       "photoName": "recipes/pancake.jpeg",
       "category": "dessert"
     },

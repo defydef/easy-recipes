@@ -1,4 +1,10 @@
-import { createContext, useContext, useEffect, useReducer } from "react";
+import {
+  createContext,
+  useCallback,
+  useContext,
+  useEffect,
+  useReducer,
+} from "react";
 
 const BASE_URL = "http://localhost:8000";
 
@@ -6,6 +12,7 @@ const initialState = {
   recipes: [],
   // loading, error, ready, active, finished
   status: "loading",
+  currentRecipe: {},
 };
 
 // 1) Create a new Context component
@@ -17,13 +24,18 @@ function reducer(state, action) {
       return { ...state, recipes: action.payload, status: "ready" };
     case "dataFailed":
       return { ...state, status: "error" };
+    case "recipes/currentRecipe":
+      return { ...state, currentRecipe: action.payload, isLoading: false };
     default:
       throw new Error("Undefined action");
   }
 }
 
 function RecipeProvider({ children }) {
-  const [{ recipes, status }, dispatch] = useReducer(reducer, initialState);
+  const [{ recipes, status, currentRecipe, isLoading }, dispatch] = useReducer(
+    reducer,
+    initialState
+  );
 
   useEffect(function () {
     const controller = new AbortController();
@@ -45,12 +57,36 @@ function RecipeProvider({ children }) {
     };
   }, []);
 
+  const getCurrentRecipe = useCallback(
+    async function getCurrentRecipe(id) {
+      if (Number(id) === currentRecipe.id) return;
+      try {
+        const res = await fetch(`${BASE_URL}/recipes/${id}`);
+        if (!res.ok) throw new Error();
+        const data = await res.json();
+        if (data.Response === "False") throw new Error();
+        dispatch({
+          type: "recipes/currentRecipe",
+          payload: data,
+        });
+      } catch {
+        dispatch({
+          type: "rejected",
+          payload: "There was an error loading data",
+        });
+      }
+    },
+    [currentRecipe.id]
+  );
+
   return (
     <RecipeContext.Provider
       value={{
         recipes,
         status,
+        getCurrentRecipe,
         dispatch,
+        currentRecipe,
       }}
     >
       {children}

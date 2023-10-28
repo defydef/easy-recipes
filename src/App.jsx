@@ -6,6 +6,7 @@ import Tips from "./pages/Tips";
 import AppLayout from "./ui/AppLayout";
 import PageNotFound from "./ui/PageNotFound";
 import RecipeList from "./pages/RecipeList";
+import RecipeDetails from "./ui/RecipeDetails";
 
 function App() {
   return (
@@ -19,7 +20,7 @@ function App() {
             <Route path="recipes" element={<RecipeList />} />
             <Route path="tips" element={<Tips />} />
             <Route path="" element={<Home />} />
-            <Route path="cities/:id" element={<Home />} />
+            <Route path="recipes/:id" element={<RecipeDetails />} />
             <Route path="countries" element={<Home />} />
           </Route>
           <Route path="*" element={<PageNotFound />} />
