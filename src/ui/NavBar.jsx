@@ -15,9 +15,9 @@ function NavBar() {
   }
 
   return (
-    <nav className="bg-amber-500 py-4 px-6 items-center shadow-sm text-slate-800">
+    <nav className="bg-amber-500 py-4 px-6 items-center shadow-sm text-slate-800 w-screen">
       <ul className="flex justify-between">
-        <div className="flex items-center gap-12">
+        <div className="flex sm:gap-12 items-center justify-start">
           <NavLink to="/">
             <Logo />
           </NavLink>
@@ -42,6 +42,8 @@ function NavBar() {
         </li>
       </ul>
     </nav>
+
+    // <nav className="bg-amber-500 py-4 px-6">Test</nav>
   );
 }
 

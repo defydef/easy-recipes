@@ -1,11 +1,11 @@
 import { Suspense } from "react";
-import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import SpinnerFullPage from "./ui/SpinnerFullPage";
 import Home from "./pages/Home";
-import Recipes from "./pages/Recipes";
 import Tips from "./pages/Tips";
 import AppLayout from "./ui/AppLayout";
 import PageNotFound from "./ui/PageNotFound";
+import RecipeList from "./pages/RecipeList";
 
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
           <Route path="" element={<AppLayout />}>
             {/* <Route index element={<Navigate replace to="cities" />} /> */}
             {/* immediately redirect to "/cities" using Navigate */}
-            <Route path="recipes" element={<Recipes />} />
+            <Route path="recipes" element={<RecipeList />} />
             <Route path="tips" element={<Tips />} />
             <Route path="" element={<Home />} />
             <Route path="cities/:id" element={<Home />} />

@@ -1,6 +1,6 @@
 function Logo() {
   return (
-    <li className="flex items-center text-xl text-slate-800">
+    <li className="flex items-center sm:text-xl text-slate-800">
       <span role="img" className="text-3xl">
         👩🏻‍🍳&nbsp;
       </span>
