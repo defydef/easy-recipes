@@ -3,25 +3,37 @@
     {
       "id": 1,
       "name": "Brownies",
-      "ingredients": "Bread with italian olive oil and rosemary",
+      "ingredients": ["240 ml whole milk"],
       "cookingTime": 45,
-      "photoName": "recipes/brownies.jpeg",
+      "photoName": "brownies.jpeg",
       "category": "dessert"
     },
     {
       "id": 2,
       "name": "Cupcakes",
-      "ingredients": "Bread with italian olive oil and rosemary",
+      "ingredients": [
+        "2 and 1/4 teaspoons (7g) instant or active dry yeast",
+        "1/3 cup (65g) granulated sugar",
+        "2 large eggs",
+        "6 Tablespoons (85g) unsalted butter, melted and slightly cooled",
+        "1 teaspoon pure vanilla extract"
+      ],
       "cookingTime": 60,
-      "photoName": "recipes/cupcakes.jpeg",
+      "photoName": "cupcakes.jpeg",
       "category": "dessert"
     },
     {
       "id": 3,
       "name": "Donuts",
-      "ingredients": "Bread with italian olive oil and rosemary",
+      "ingredients": [
+        "2 and 1/4 teaspoons (7g) instant or active dry yeast",
+        "1/3 cup (65g) granulated sugar",
+        "2 large eggs",
+        "6 Tablespoons (85g) unsalted butter, melted and slightly cooled",
+        "1 teaspoon pure vanilla extract"
+      ],
       "cookingTime": 30,
-      "photoName": "recipes/donuts.jpeg",
+      "photoName": "donuts.jpeg",
       "category": "dessert"
     },
     {
@@ -29,7 +41,7 @@
       "name": "Macarons",
       "ingredients": "Bread with italian olive oil and rosemary",
       "cookingTime": 180,
-      "photoName": "recipes/macarons.jpeg",
+      "photoName": "macarons.jpeg",
       "category": "dessert"
     },
     {
@@ -37,7 +49,7 @@
       "name": "Pancakes",
       "ingredients": "Bread with italian olive oil and rosemary",
       "cookingTime": 15,
-      "photoName": "recipes/pancake.jpeg",
+      "photoName": "pancake.jpeg",
       "category": "dessert"
     },
     {
@@ -45,7 +57,7 @@
       "name": "Brownies",
       "ingredients": "Bread with italian olive oil and rosemary",
       "cookingTime": 60,
-      "photoName": "recipes/brownies.jpeg",
+      "photoName": "brownies.jpeg",
       "category": "dessert"
     },
     {
@@ -53,7 +65,7 @@
       "name": "Cupcakes",
       "ingredients": "Bread with italian olive oil and rosemary",
       "cookingTime": 60,
-      "photoName": "recipes/cupcakes.jpeg",
+      "photoName": "cupcakes.jpeg",
       "category": "dessert"
     },
     {
@@ -61,7 +73,7 @@
       "name": "Donuts",
       "ingredients": "Bread with italian olive oil and rosemary",
       "cookingTime": 60,
-      "photoName": "recipes/donuts.jpeg",
+      "photoName": "donuts.jpeg",
       "category": "dessert"
     },
     {
@@ -69,7 +81,7 @@
       "name": "Macarons",
       "ingredients": "Bread with italian olive oil and rosemary",
       "cookingTime": 60,
-      "photoName": "recipes/macarons.jpeg",
+      "photoName": "macarons.jpeg",
       "category": "dessert"
     },
     {
@@ -77,7 +89,7 @@
       "name": "Pancakes",
       "ingredients": "Bread with italian olive oil and rosemary",
       "cookingTime": 180,
-      "photoName": "recipes/pancake.jpeg",
+      "photoName": "pancake.jpeg",
       "category": "dessert"
     },
     {
@@ -85,7 +97,7 @@
       "name": "Pancakes",
       "ingredients": "Bread with italian olive oil and rosemary",
       "cookingTime": 60,
-      "photoName": "recipes/pancake.jpeg",
+      "photoName": "pancake.jpeg",
       "category": "dessert"
     },
     {
@@ -93,7 +105,7 @@
       "name": "Pancakes",
       "ingredients": "Bread with italian olive oil and rosemary",
       "cookingTime": 60,
-      "photoName": "recipes/pancake.jpeg",
+      "photoName": "pancake.jpeg",
       "category": "dessert"
     }
   ]

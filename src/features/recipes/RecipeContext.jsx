@@ -13,6 +13,7 @@ const initialState = {
   // loading, error, ready, active, finished
   status: "loading",
   currentRecipe: {},
+  isLoading: false,
 };
 
 // 1) Create a new Context component
@@ -26,6 +27,8 @@ function reducer(state, action) {
       return { ...state, status: "error" };
     case "recipes/currentRecipe":
       return { ...state, currentRecipe: action.payload, isLoading: false };
+    case "loading":
+      return { ...state, isLoading: true };
     default:
       throw new Error("Undefined action");
   }
@@ -60,8 +63,10 @@ function RecipeProvider({ children }) {
   const getCurrentRecipe = useCallback(
     async function getCurrentRecipe(id) {
       if (Number(id) === currentRecipe.id) return;
+      dispatch({ type: "loading" });
       try {
         const res = await fetch(`${BASE_URL}/recipes/${id}`);
+
         if (!res.ok) throw new Error();
         const data = await res.json();
         if (data.Response === "False") throw new Error();
@@ -87,6 +92,7 @@ function RecipeProvider({ children }) {
         getCurrentRecipe,
         dispatch,
         currentRecipe,
+        isLoading,
       }}
     >
       {children}
