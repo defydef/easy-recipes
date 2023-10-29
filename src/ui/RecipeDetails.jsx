@@ -6,7 +6,7 @@ import Loader from "./Loader";
 function RecipeDetails() {
   const { id } = useParams();
   const { currentRecipe, getCurrentRecipe, status, isLoading } = useRecipe();
-  const { name, ingredients, cookingTime, photoName, category } = currentRecipe;
+  const { name, ingredients, cookingTime, photoName } = currentRecipe;
 
   useEffect(
     function () {

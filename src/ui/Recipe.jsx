@@ -3,11 +3,19 @@ import { Link } from "react-router-dom";
 /* eslint-disable react/prop-types */
 function Recipe({ recipe }) {
   const currentUrl = window.location.href;
-  const urlPrefix = currentUrl.includes("/recipes") ? "" : "recipes/";
+  const urlPrefix = currentUrl.endsWith("/recipes") ? "" : "recipes/";
+  const isTrailingSlash = currentUrl.endsWith("/");
   return (
     <div className="flex flex-col border-stone-300 border-solid border rounded-md">
-      <div className="max-h-[180px] overflow-clip">
-        <img src={`recipes/${recipe.photoName}`} width="500px" />
+      <div className="max-h-[300px] overflow-clip">
+        <img
+          src={
+            isTrailingSlash
+              ? `${recipe.photoName}`
+              : `recipes/${recipe.photoName}`
+          }
+          width="500px"
+        />
       </div>
       <div className="sm:p-5 p-2 flex flex-col gap-2">
         <div className="flex justify-between">

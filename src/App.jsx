@@ -1,5 +1,11 @@
 import { Suspense } from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import {
+  BrowserRouter,
+  Navigate,
+  Route,
+  Routes,
+  redirect,
+} from "react-router-dom";
 import SpinnerFullPage from "./ui/SpinnerFullPage";
 import Home from "./pages/Home";
 import Tips from "./pages/Tips";
@@ -18,6 +24,7 @@ function App() {
             {/* <Route index element={<Navigate replace to="cities" />} /> */}
             {/* immediately redirect to "/cities" using Navigate */}
             <Route path="recipes" element={<RecipeList />} />
+
             <Route path="tips" element={<Tips />} />
             <Route path="" element={<Home />} />
             <Route path="recipes/:id" element={<RecipeDetails />} />
