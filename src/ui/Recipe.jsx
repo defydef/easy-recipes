@@ -14,7 +14,8 @@ function Recipe({ recipe }) {
               ? `${recipe.photoName}`
               : `recipes/${recipe.photoName}`
           }
-          width="500px"
+          width="450px"
+          className="rounded-[5px]"
         />
       </div>
       <div className="sm:p-5 p-2 flex flex-col gap-2">
